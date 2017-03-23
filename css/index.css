@@ -1,0 +1,129 @@
+body { width: 100%; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1; background: url(../images/bg.jpg); }
+h3 { border-bottom: 1px solid #ccc; color: #e15518; font-family: "方正大黑简体"; padding-bottom: 5px; }
+h4 { font-family: "方正正准黑简体"; }
+a { color: #000; text-decoration:none; }
+a:hover { color: #e15518; text-decoration:none;}
+.logo { float: right; }
+.menu { width: 15px; float: left; }
+header { display: block; width: 100%; height: 52px; padding: 15px 10px; background-color: #fff; border-bottom: 1px solid #CCC; }
+#cp>div { margin-bottom: 20px; }
+#cp>div img { -moz-box-shadow: 0 0 5px rgba(239,239,239,0.2); -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2); box-shadow: 0 0 5px rgba(0,0,0,0.2); -webkit-transition-delay: 0.05s; transition-delay: 0.05s; -webkit-transition-duration: 0.35s; transition-duration: 0.35s; }
+#cp>div img:hover { -moz-box-shadow: 0 0 0px rgba(239,239,239,0.2); -webkit-box-shadow: 0 0 0px rgba(0,0,0,0.2); box-shadow: 0 0 0px rgba(0,0,0,0.2); }
+#nav, #banner, #content { margin-bottom: 50px; }
+#content { min-height: 550px; }
+#foot { background: #fff; border-top: 1px solid #CCC; }
+footer { text-align: center; padding: 20px 0 0 0; font-size: 12px; color: #999; }
+/** 侧边栏 **/
+#navbar { max-width: 1000px; margin: 0 auto; }
+.menubtn { position: relative; z-index: 101; color: #274a61; text-decoration: none; font-size: 0em; line-height: 0em; top: 2px; padding: 15px; background-image: url('../images/hamburger.png'); background-position: 50% 50%; background-size: 25px 25px; background-repeat: no-repeat; }
+.menubtn:hover, .openmenu .menubtn { color: #bdd43e; background-image: url('../images/hamburger-active.png'); }
+/** toggle menu **/
+body.openmenu { position: fixed; overflow: hidden; }
+#pgcontainer { margin: 0; }
+.overlay { position: fixed; z-index: 99; background-color: rgba(0,0,0,0.5); bottom: 0; right: 0; left: 0; }
+.openmenu .overlay { top: 0; }
+#hamburgermenu { height: 100%; width: 0; background: #373737; position: fixed; top: 0; left: 0; z-index: 101; overflow: hidden; -webkit-box-shadow: 3px 0 7px rgba(0,0,0,0.55); -moz-box-shadow: 3px 0 7px rgba(0,0,0,0.55); box-shadow: 3px 0 7px rgba(0,0,0,0.55); }
+#hamburgermenu ul { margin-top: 45px; z-index: 101; overflow-y: auto; overflow-x: hidden; padding: 0; }
+#hamburgermenu ul li { display: block; }
+#hamburgermenu ul li a { display: block; min-width: 130px; padding: 18px 8px; color: #cdcdcd; font-size: 1em; font-weight: bold; text-decoration: none; text-align: center; }
+#hamburgermenu li a:hover { color: #fff; background: #2c2c2c; }
+/** 侧边栏结束 **/
+/** 3D banner **/
+.sb-slider { margin: 10px auto; position: relative; overflow: hidden; width: 100%; list-style-type: none; padding: 0; }
+.sb-slider li { margin: 0; padding: 0; display: none; }
+.sb-slider li > a { outline: none; }
+.sb-slider li > a img { border: none; }
+.sb-slider img { max-width: 100%; display: block; }
+.sb-description { padding: 20px; bottom: 10px; left: 10px; right: 10px; z-index: 1000; position: absolute; background: #CBBFAE; background: rgba(190,176,155, 0.4); border-left: 4px solid rgba(255,255,255,0.7); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter: alpha(opacity=0); opacity: 0; color: #fff; -webkit-transition: all 200ms; -moz-transition: all 200ms; -o-transition: all 200ms; -ms-transition: all 200ms; transition: all 200ms; }
+.sb-slider li.sb-current .sb-description { -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; filter: alpha(opacity=80); opacity: 1; }
+.sb-slider li.sb-current .sb-description:hover { -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=99)"; filter: alpha(opacity=99); background: rgba(190,176,155, 0.7); }
+.sb-perspective { position: relative; }
+.sb-perspective > div { position: absolute; -webkit-transform-style: preserve-3d; -moz-transform-style: preserve-3d; -o-transform-style: preserve-3d; -ms-transform-style: preserve-3d; transform-style: preserve-3d; -webkit-backface-visibility : hidden; -moz-backface-visibility : hidden; -o-backface-visibility : hidden; -ms-backface-visibility : hidden; backface-visibility : hidden; }
+.sb-side { margin: 0; display: block; position: absolute; -moz-backface-visibility : hidden; -webkit-transform-style: preserve-3d; -moz-transform-style: preserve-3d; -o-transform-style: preserve-3d; -ms-transform-style: preserve-3d; transform-style: preserve-3d; }
+.shadow { width: 100%; height: 168px; position: relative; margin-top: -110px; background: transparent url(../images/shadow.png) no-repeat bottom center; background-size: 100% 100%; /* stretches it */ z-index: -1; display: none; }
+.wrapper { width: 100%; position: relative; }
+.nav-arrows { display: none; }
+.nav-arrows a { width: 42px; height: 42px; background: #cbbfae url(../images/nav.png) no-repeat top left; position: absolute; top: 50%; left: 2px; text-indent: -9000px; cursor: pointer; margin-top: -21px; opacity: 0.9; border-radius: 50%; box-shadow: 0 1px 1px rgba(255,255,255,0.8); outline: none;}
+.nav-arrows a:first-child { left: auto; right: 2px; background-position: top right; }
+.nav-arrows a:hover { opacity: 1; }
+/** 3D banner结束 **/
+
+
+
+
+
+/** 产品展示页 **/
+.cp-list { margin-bottom: 50px; }
+
+
+.grid {
+	padding: 20px 20px 100px 20px;
+	max-width: 100%;
+	margin: 0 auto;
+	list-style: none;
+	text-align: center;
+}
+
+.grid li {
+	text-align: center;
+	max-width:258px;
+	margin-bottom:20px;
+}
+
+.grid figure {
+	margin: 0;
+	overflow: hidden;
+}
+
+.grid figure img {
+	max-width: 100%;
+	width:auto;
+	height:auto;
+	display: block;
+
+}
+
+.grid figcaption {
+
+	background: #2c3f52;	
+	height: 30px;
+	width: 100%;
+
+
+}
+
+.grid figcaption h3 {
+	color: #fff;
+	font-size:18px;
+	line-height:30px;
+	height:30px;
+	white-space:nowrap;
+	overflow:hidden;
+	padding:0;
+	margin:0;
+	cursor:pointer;
+}
+.grid figcaption h3:hover{ color:#F63;}
+@media (max-width: 767px) {
+ .grid figcaption h3{ font-size:16px;}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+/** 产品参数页 **/
+.cp-banner { background: #F6F6F8; }
+.cp-banner img { margin: auto; }
+
+/** 关于页面 **/
+.about { background-color: #fff; }
+.about-text { margin-bottom: 50px; min-height: 200px; }
+.about p { padding: 5px 0; }
